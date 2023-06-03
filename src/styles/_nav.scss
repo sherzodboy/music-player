@@ -1,25 +1,27 @@
-nav {
+nav{
   min-height: 10vh;
   display: flex;
   justify-content: space-around;
-  align-items: center;
-  button {
+  align-items: center;  
+  button{
     background: transparent;
     border: none;
     cursor: pointer;
     border: 2px solid rgb(65,65,65);
-    padding: 0.5rem;
+    padding:0.5rem;
     transition: all 0.3s ease;
-    &:hover {
+    &:hover{
       background: rgb(65,65,65);
-      color: white;
+      color:white
     }
   }
 }
-
-@media screen and (max-width: 768px) {
-  nav {
-    button {
+@media screen and (max-width:955px) {
+  nav{
+    justify-content: space-between;
+    width:90%;
+    margin: auto;
+    button{
       z-index: 10;
     }
   }

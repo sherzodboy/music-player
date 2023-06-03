@@ -1,31 +1,30 @@
-* {
+*{
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
-
-body {
+h1,
+h2,
+h3{
+  color: rgb(53, 53, 53);
+}
+h3,h4{
+  font-weight: 400;
+  color:rgb(100,100,100);
+}
+body{
   font-family: 'Lato', sans-serif;
 }
 
-h3,h4 {
-  font-weight: 400;
-  color: rgb(100, 100, 100);
-}
-
-.App {
+.App{
   transition: all 0.5s ease;
 }
 
-.library-active {
-  margin-left: 30%;
+.library-active{
+  margin-left:30%;
 }
 
-h1,h2,h3 {
-  color: rgb(54, 54, 54);
-}
-
-@import "./song";
-@import "./player";
-@import "./library";
-@import "./nav";
+@import "./Song";
+@import "./Player";
+@import "./Library";
+@import "./Nav"

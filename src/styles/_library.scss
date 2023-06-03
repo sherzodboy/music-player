@@ -1,74 +1,66 @@
-.library {
+.library{
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 20rem;
-  height: 100%;
+  top:0;
+  left:0;
+  max-width: 20rem;
+  height: 100vh;
   background: white;
-  box-shadow: 2px 2px 50px rgb(204, 202, 202);
-  overflow: scroll;
+  box-shadow: 2px 2px 50px rgb(220,220,220);
   transform: translateX(-100%);
   transition: all 0.5s ease;
   opacity: 0;
-  h2 {
-    padding: 2rem;
+  h2{
+    padding:2rem
   }
+  overflow: scroll;
 }
-
-.library-song {
+.libary-song{
   display: flex;
   align-items: center;
-  padding: 1rem 2rem 1rem 2rem;
+  padding: 2rem ;
   cursor: pointer;
   transition: background 0.5s ease;
-  img {
-    width: 30%;
+  img{
+    width:30%;  
   }
-  &:hover {
-    background-color: rgb(241, 212, 241);
+  &:hover{
+    background:rgb(223, 220, 255);    
   }
 }
-
-.song-description {
+.song-description{
   padding-left: 1rem;
-  h3 {
+  h3{
     font-size: 1rem;
   }
-  h4 {
+  h4{
     font-size: 0.7rem;
   }
 }
 
-* {
+*{
   scrollbar-width: thin;
-  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+  scrollbar-color:rgba(155,155,155,0.5)transpatent;
 }
-
-*::-webkit-scrollbar {
-  width: 5px;   
+*::-webkit-scrollbar{
+  width:5px;
 }
-
-*::-webkit-scrollbar-track {
-  background: transparent;
+*::-webkit-scrollbar-track{
+  background:transparent;
 }
-
-*::-webkit-scrollbar-thumb {
-  background-color: rgba(155, 155, 155, 0.5);
-  border-radius: 20px;
+*::-webkit-scrollbar-thumb{
+  background:rgba(155,155,155,0.5);
   border: transparent;
+  border-radius: 20px;
 }
-
-.selected {
-  background-color: rgb(241, 212, 241);
+.selected{
+  background:rgb(223, 220, 255); 
 }
-
-.active-library {
+.active{
   transform: translateX(0%);
   opacity: 1;
 }
-
-@media screen and (max-width: 768px) {
-  .library {
-    width: 100%;
+@media screen and (max-width:955px){
+  .library{
+    width:100%;
   }
 }
