@@ -1,44 +1,53 @@
 import React from "react";
 
-const LibrarySong=({song,setCurrentSong,isPlaying,id,songs,setSongs,audioRef})=>{
+const LibrarySong = ({
+  song,
+  setCurrentSong,
+  isPlaying,
+  id,
+  songs,
+  setSongs,
+  audioRef,
+}) => {
   //Handlers
-  const songSelectorHandler=()=>{
+  const songSelectorHandler = () => {
     setCurrentSong(song);
     //to update the active value
-    const newSongs= songs.map((song)=>{
-      if(song.id === id){
-        return{
+    const newSongs = songs.map((song) => {
+      if (song.id === id) {
+        return {
           ...song,
-          active:true,
-        }
-      }else{
-        return{
+          active: true,
+        };
+      } else {
+        return {
           ...song,
-          active:false
-        }
+          active: false,
+        };
       }
-    })
-    setSongs(newSongs)
-    if(isPlaying){
-      const playP=audioRef.current.play();
-      if(playP !== undefined){
-        playP.then((audio)=>{
+    });
+    setSongs(newSongs);
+    if (isPlaying) {
+      const playP = audioRef.current.play();
+      if (playP !== undefined) {
+        playP.then((audio) => {
           audioRef.current.play();
-        })
+        });
       }
     }
-  }
-  return(
+  };
+  return (
     <div
-     className={`libary-song ${song.active ? "selected" :""}`} 
-     onClick={songSelectorHandler}>
+      className={`libary-song ${song.active ? "selected" : ""}`}
+      onClick={songSelectorHandler}
+    >
       <img src={song.cover} alt={song.name} />
       <div className="song-description">
         <h3>{song.name}</h3>
         <h4>{song.artist}</h4>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default LibrarySong;
